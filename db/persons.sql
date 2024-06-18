@@ -1,9 +1,0 @@
-CREATE DATABASE Dockerdb;
-
-use Dockerdb;
-
-CREATE TABLE `persons` (
-		`idnumber` INT unsigned NOT NULL PRIMARY KEY AUTO_INCREMENT,
-		`name` VARCHAR(255) NOT NULL,
-		`age` INT NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
