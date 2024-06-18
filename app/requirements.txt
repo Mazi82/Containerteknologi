@@ -1,4 +1,2 @@
-cryptography
 Flask
-Flask-MySQL
-PyMySQL
+mysqlclient
