@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  mysql:
+    build: ./mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: flaskdb
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - flask_network
+
+  flaskapp:
+    build: ./flaskapp
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+    networks:
+      - flask_network
+
+networks:
+  flask_network:
+
+volumes:
+  mysql_data:
